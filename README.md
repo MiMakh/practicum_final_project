@@ -76,7 +76,7 @@ Clients can pay for services every month or sign a contract for 1-2 years. Vario
 * We have added a feature for how long the contract was opened - `client_years`
 * We see that the distribution is similar to bimodal - many new clients and many old clients who are about 6 years old
 
-![image.png](attachment:image.png)
+![image](https://user-images.githubusercontent.com/12784655/219446285-f5491894-fa9e-42eb-ba9c-cf4c9ee8b732.png)
 
 ### Target correlation with variables:
 * Constructed a correlation matrix of target phik with other values.
@@ -99,15 +99,14 @@ Other coefficients are too low or not significant
      * `device_protection`, `tech_support` and other services have a linear relationship of medium strength
 * All dependencies above stat are significant
 
-![image-2.png](attachment:image-2.png)
+![image](https://user-images.githubusercontent.com/12784655/219446366-dffd3407-1257-4e26-8b51-ac8bb9268d6e.png)
 
 
 **Target depends on the type of phone or Internet service**:
 - We see that, on average, the target does not change much from the presence of a phone or several lines (about 0.25)
 - **However, the fiber target is much higher than the 0.42 dataset**, this may indicate that the quality of the fiber is not the best, and companies should pay attention to this
 
-![image-3.png](attachment:image-3.png)
-![image-4.png](attachment:image-4.png)
+![image](https://user-images.githubusercontent.com/12784655/219446434-2451bbd5-f736-476a-92b2-cceda9862bf1.png)
 
 ### Portrait of an churned client
 
@@ -154,7 +153,7 @@ We use the following conventional interpretation:
 * We created several features, but they were all correlated, after removing the feature, we are left with two that show a low degree of correlation.
 * Final characteristics are the time (years) from the beginning of the contract and the ratio of the monthly payment to the final one, `client_years`, `monthly_total_ratio`.
 
-![image-6.png](attachment:image-6.png)
+![image](https://user-images.githubusercontent.com/12784655/219446496-077cc5e1-1b6b-475f-9381-cbc2249254f5.png)
 
 ## Encoding variables and creating a preprocessing pipeline
 
@@ -195,7 +194,7 @@ We use the following conventional interpretation:
 
 ### Model selection
 * Gradient boosting performed best of 0.96 ROC-AUC on cross-validation, which is above the required thrashhold of 0.85
-![image-7.png](attachment:image-7.png)
+![image](https://user-images.githubusercontent.com/12784655/219446570-0670054f-ab93-4d10-9908-ed4bf40f4a75.png)
 
 ## Feature importances
 
@@ -210,7 +209,7 @@ The top 2 features are numeric features:
 <h4><center>Top 10</center></h4>
 
 
-![image-10.png](attachment:image-10.png)
+![image](https://user-images.githubusercontent.com/12784655/219446611-dfad47ce-49e0-499f-8894-2d70a1294588.png)
 
 ## Additional score metrics
 
@@ -220,8 +219,7 @@ The top 2 features are numeric features:
 
 * Our recommendation for further work is to select a model that optimizes the recall metric - if we want to find exactly all customers who are going to terminate the contract
 
-![image-12.png](attachment:image-12.png)
-
+![image](https://user-images.githubusercontent.com/12784655/219446670-4403bd12-1d2e-4bec-8ad1-a87442e526ec.png)
 
 * `Accuracy score`: 0.92
 * `Precision score`: 0.86
@@ -232,12 +230,12 @@ The top 2 features are numeric features:
 <h4><center>ROC-AUC</center></h4>
 
 
-![image-11.png](attachment:image-11.png)
+![image](https://user-images.githubusercontent.com/12784655/219446726-9727af33-bb2a-429f-acf8-bbde75bcfead.png)
 
 
-## Test set predictions
+## Test
 
-* On the test sample, the result is 0.96, which is higher than the prog metric and coincides with the validation. We consider the model successful.
+* On the test sample, the result is 0.96, which coincides with the validation. We consider the model successful.
 
 ## General conclusions
 
