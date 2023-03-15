@@ -237,7 +237,7 @@ The top 2 features are numeric features:
 
 * On the test sample, the result is 0.96, which coincides with the validation. We consider the model successful.
 
-## General conclusions
+## Conclusions
 
 **In this work, we analyzed the data and developed a model for No Gap.com that predicts which customers are most likely to leave a contract and allows the marketing department to focus on retaining those customers**
 
